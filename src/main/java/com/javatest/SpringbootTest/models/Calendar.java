@@ -41,5 +41,9 @@ public class Calendar {
         this.cutOffTime = cutOffTime;
     }
 
-    
+    public boolean IsAvailable(String day, int hour, int minutes){
+
+        return ((this.Day.equals("ALL") || this.Day.equals(day)) &&
+                (hour*60+minutes<this.cutOffTime.getHour()*60+this.cutOffTime.getMinute()) );
+    }
 }

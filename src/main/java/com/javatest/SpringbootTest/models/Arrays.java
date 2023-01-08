@@ -1,9 +1,13 @@
 package com.javatest.SpringbootTest.models;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.ArrayList;
 
 public class Arrays {
 
+    @Getter @Setter
     ArrayList<Supply> supplies = new ArrayList<>();
     ArrayList<Demand> demands = new ArrayList<>();
     ArrayList<Inventory> inventories = new ArrayList<>();
@@ -54,7 +58,6 @@ public class Arrays {
     }
 
     public String getDayString(int day){
-        System.out.println(day);
         return days.get(day);
     }
 }
